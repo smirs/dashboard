@@ -41,7 +41,7 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
 timewin = 10
 for i in indict:
-    sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
+    ax = sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
     plt.annotate(i, xy=(observations[i]['timestamp'][0], observations[i]['temperature_value'][0]))
     
 import matplotlib.dates as mdates
