@@ -5,5 +5,4 @@ seaborn
 numpy
 noaa_sdk
 datetime
-matplotlib.pyplot
 xkcd.py
