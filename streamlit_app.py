@@ -49,7 +49,7 @@ xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours 
 xlabels = [x for x in xlabels]
 
 
-# plt.set_xticklabels(xlabels, rotation=45);
+plt.set_xticklabels(xlabels, rotation=45);
 # ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
 # ax.set_xlabel('')
 # ax.set_ylabel('')
