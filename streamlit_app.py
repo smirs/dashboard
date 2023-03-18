@@ -57,5 +57,6 @@ x_ticks = []
 
 plt.xticks(locs_x, xlabels, rotation=45, horizontalalignment='right', fontsize=48)
 plt.yticks(locs_y, labels_y, rotation=0, horizontalalignment='right', fontsize=48)
+ax.get_legend().remove()
 
 st.pyplot(ax)
