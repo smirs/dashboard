@@ -36,7 +36,7 @@ today = d[0:10]
 
 # sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
 ax = plt.figure(figsize=(22, 16))
-ax.suptitle('test title', fontsize=20)
+ax.suptitle('Rohit"s Team Tempreture in the USA @' + today, fontsize=48)
 plt.xlabel('xlabel', fontsize=18)
 plt.ylabel('ylabel', fontsize=16)
 
