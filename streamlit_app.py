@@ -4,7 +4,6 @@ import seaborn as sns
 from noaa_sdk import NOAA
 import datetime
 import matplotlib.pyplot as plt
-plt.rcParams.update({'font.size': 22})
 
 import streamlit as st 
 plt.xkcd()
@@ -39,8 +38,8 @@ today = d[0:10]
 # sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
 ax = plt.figure(figsize=(22, 16))
 ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
-plt.xlabel(' ', fontsize=18)
-plt.ylabel(' ', fontsize=16)
+plt.xlabel(' ', fontsize=24)
+plt.ylabel(' ', fontsize=52)
 
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
