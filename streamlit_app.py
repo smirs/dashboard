@@ -33,12 +33,14 @@ for i in indict:
 d = str(observations['St. Louis, MO']['timestamp'][0])
 today = d[0:10]
 
-sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
+# sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
+ax = plt.figure(figsize=(10, 4))
+
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
 timewin = 10
 for i in indict:
-    ax= sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
+    sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
     plt.annotate(i, xy=(observations[i]['timestamp'][0], observations[i]['temperature_value'][0]))
     
 import matplotlib.dates as mdates
