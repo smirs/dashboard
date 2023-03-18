@@ -5,7 +5,6 @@ from noaa_sdk import NOAA
 import datetime
 import matplotlib.pyplot as plt
 import streamlit as st 
-plt.xkcd()
 
 indict = {'St. Louis, MO':'63368', 
           'Charlotte, NC':'28277', 
