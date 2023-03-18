@@ -53,8 +53,8 @@ xlabels = [x for x in xlabels]
 # # myFmt = mdates.DateFormatter('%A %H:%M')
 # # ax.xaxis.set_major_formatter(myFmt)
 # ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
-ax.set_xlabel('')
-ax.set_ylabel('')
+# ax.set_xlabel('')
+# ax.set_ylabel('')
 
 # ax.legend(loc='upper left')
 
