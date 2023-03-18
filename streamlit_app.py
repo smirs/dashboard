@@ -53,7 +53,7 @@ xlabels = [x for x in xlabels]
 
 locs, labels=plt.xticks()
 x_ticks = []
-new_xticks=['test' for d in locs]
-plt.xticks(locs, new_xticks, rotation=90, horizontalalignment='right')
+# new_xticks= ['test' for d in locs]
+plt.xticks(locs, xlabels, rotation=90, horizontalalignment='right')
 
 st.pyplot(ax)
