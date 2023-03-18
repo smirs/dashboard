@@ -36,7 +36,7 @@ d = str(observations['St. Louis, MO']['timestamp'][0])
 today = d[0:10]
 
 ax = plt.figure(figsize=(44, 32))
-ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
+ax.suptitle('Team Tempreture in the USA @' + today, fontsize=128)
 plt.xlabel(' ', fontsize=24)
 plt.ylabel(' ', fontsize=24)
 
@@ -44,8 +44,8 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize
 
 timewin = 10
 for i in indict:
-    sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
-    plt.annotate(i, xy=(observations[i]['timestamp'][0], observations[i]['temperature_value'][0]))
+    sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i, fontsize=48)
+    plt.annotate(i, xy=(observations[i]['timestamp'][0], observations[i]['temperature_value'][0]), fontsize=48)
     
 xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours Ago','10 Hours Ago', '12 Hours Ago','14 Hours Ago','16 Hours Ago','18 Hours Ago','20 Hours Ago'])
 xlabels = [x for x in xlabels]
