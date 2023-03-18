@@ -35,7 +35,7 @@ d = str(observations['St. Louis, MO']['timestamp'][0])
 today = d[0:10]
 
 # sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
-ax = plt.figure(figsize=(22, 16), title="Evolution of stock prices")
+ax = plt.figure(figsize=(22, 16))
 
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
