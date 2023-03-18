@@ -38,7 +38,7 @@ today = d[0:10]
 ax = plt.figure(figsize=(44, 32))
 ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
 plt.xlabel(' ', fontsize=24)
-plt.ylabel(' ', fontsize=52)
+plt.ylabel(' ', fontsize=24)
 
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
@@ -53,7 +53,6 @@ xlabels = [x for x in xlabels]
 
 locs, labels=plt.xticks()
 x_ticks = []
-# new_xticks= ['test' for d in locs]
 plt.xticks(locs, xlabels, rotation=45, horizontalalignment='right')
 
 st.pyplot(ax)
