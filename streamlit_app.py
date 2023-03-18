@@ -40,7 +40,7 @@ ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
 plt.xlabel(' ', fontsize=24)
 plt.ylabel(' ', fontsize=24)
 
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=48)
 
 timewin = 10
 for i in indict:
@@ -50,8 +50,12 @@ for i in indict:
 xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours Ago','10 Hours Ago', '12 Hours Ago','14 Hours Ago','16 Hours Ago','18 Hours Ago','20 Hours Ago'])
 xlabels = [x for x in xlabels]
 
-locs, labels=plt.xticks()
+locs_x, labels_x=plt.xticks()
+locs_y, labels_y=plt.yticks()
+
 x_ticks = []
-plt.xticks(locs, xlabels, rotation=45, horizontalalignment='right', fontsize=24)
+
+plt.xticks(locs_x, xlabels, rotation=45, horizontalalignment='right', fontsize=48)
+plt.yticks(locs_y, labels_y, rotation=0, horizontalalignment='right', fontsize=48)
 
 st.pyplot(ax)
