@@ -41,18 +41,15 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
 timewin = 10
 for i in indict:
-    ax = sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
+    sns.lineplot(x='timestamp', y='temperature_value', data=observations[i][observations[i]['timestamp'] >= (observations[i]['timestamp'][0] - pd.DateOffset(hours=timewin))], label= i)
     plt.annotate(i, xy=(observations[i]['timestamp'][0], observations[i]['temperature_value'][0]))
     
-import matplotlib.dates as mdates
 xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours Ago','10 Hours Ago',
                     '12 Hours Ago','14 Hours Ago','16 Hours Ago','18 Hours Ago','20 Hours Ago'])
 xlabels = [x for x in xlabels]
 
 
-# ax.set_xticklabels(xlabels, rotation=45);
-# # myFmt = mdates.DateFormatter('%A %H:%M')
-# # ax.xaxis.set_major_formatter(myFmt)
+# plt.set_xticklabels(xlabels, rotation=45);
 # ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
 # ax.set_xlabel('')
 # ax.set_ylabel('')
