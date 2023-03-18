@@ -50,8 +50,8 @@ for i in indict:
 xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours Ago','10 Hours Ago', '12 Hours Ago','14 Hours Ago','16 Hours Ago','18 Hours Ago','20 Hours Ago'])
 xlabels = [x for x in xlabels]
 
-# locs, labels=plt.xticks()
-# x_ticks = []
-# plt.xticks(locs, xlabels, rotation=45, horizontalalignment='right', fontsize=24)
+locs, labels=plt.xticks()
+x_ticks = []
+plt.xticks(locs, xlabels, rotation=45, horizontalalignment='right', fontsize=24)
 
 st.pyplot(ax)
