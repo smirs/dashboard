@@ -40,7 +40,7 @@ ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
 plt.xlabel(' ', fontsize=24)
 plt.ylabel(' ', fontsize=52)
 
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=24)
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
 timewin = 10
 for i in indict:
