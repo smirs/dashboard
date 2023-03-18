@@ -56,6 +56,6 @@ xlabels = [x for x in xlabels]
 # ax.set_xlabel('')
 # ax.set_ylabel('')
 
-ax.legend(loc='upper left')
+# ax.legend(loc='upper left')
 
 st.pyplot(ax)
