@@ -37,9 +37,8 @@ today = d[0:10]
 # sns.set(rc={'figure.figsize':(21.7,15.27)}, font_scale=2)
 ax = plt.figure(figsize=(22, 16))
 ax.suptitle('Team Tempreture in the USA @' + today, fontsize=48)
-plt.xlabel('', fontsize=18)
-plt.ylabel('', fontsize=16)
-plt.xticks(rotation = 90)
+plt.xlabel(' ', fontsize=18)
+plt.ylabel(' ', fontsize=16)
 
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 
@@ -52,12 +51,9 @@ xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours 
                     '12 Hours Ago','14 Hours Ago','16 Hours Ago','18 Hours Ago','20 Hours Ago'])
 xlabels = [x for x in xlabels]
 
-
-# set_xticklabels(xlabels, rotation=45);
-# ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
-# ax.set_xlabel('')
-# ax.set_ylabel('')
-
-# ax.legend(loc='upper left')
+locs, labels=plt.xticks()
+x_ticks = []
+new_xticks=['test' for d in locs]
+plt.xticks(locs, new_xticks, rotation=90, horizontalalignment='right')
 
 st.pyplot(ax)
