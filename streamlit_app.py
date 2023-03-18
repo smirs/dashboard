@@ -49,12 +49,12 @@ xlabels = reversed(['Now','2 Hours Ago','4  Hours Ago','6  Hours Ago','8  Hours 
 xlabels = [x for x in xlabels]
 
 
-ax.set_xticklabels(xlabels, rotation=45);
-# myFmt = mdates.DateFormatter('%A %H:%M')
-# ax.xaxis.set_major_formatter(myFmt)
-ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
-ax.set_xlabel('')
-ax.set_ylabel('')
+# ax.set_xticklabels(xlabels, rotation=45);
+# # myFmt = mdates.DateFormatter('%A %H:%M')
+# # ax.xaxis.set_major_formatter(myFmt)
+# ax.set_title('Rohit"s Team Tempreture in the USA @' + today)
+# ax.set_xlabel('')
+# ax.set_ylabel('')
 
 ax.legend(loc='upper left')
 
