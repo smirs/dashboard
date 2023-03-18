@@ -4,6 +4,8 @@ import seaborn as sns
 from noaa_sdk import NOAA
 import datetime
 import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 22})
+
 import streamlit as st 
 plt.xkcd()
 
