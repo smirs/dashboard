@@ -80,7 +80,7 @@ ax = plt.figure(figsize=(44, 32))
 # ax.text(year_of_one_million, 0.5*max(gain),'Expected Time For\nProfit in $1M ' + str(round(year_of_one_million, 1)), fontsize=24, color='darkred')
 
 
-ax.text(0, 1.1*max(gain), 'Property = '+ Address, fontsize=28, color='black')
+# ax.text(0, 1.1*max(gain), 'Property = '+ Address, fontsize=28, color='black')
 
 # d = 120000
 # ax.text(0, 0.95*max(gain) - 0*d, 'VARIABLES', fontsize=22, color='darkblue')
