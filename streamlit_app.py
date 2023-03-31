@@ -72,9 +72,14 @@ cost = list(map(Total_Cost, x))
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
-ax = plt.figure(figsize=(44, 32))
-ax = sns.lineplot(x='time', y='gain', data=df)
-st.pyplot(ax)
+fig, ax = plt.subplots()
+ax.lineplot(x='time', y='gain', data=df)
+
+st.pyplot(fig)
+
+# ax = plt.figure(figsize=(44, 32))
+# ax = sns.lineplot(x='time', y='gain', data=df)
+# st.pyplot(ax)
 
 
 # sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
