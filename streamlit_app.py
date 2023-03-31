@@ -13,7 +13,7 @@ Address = '1976 Greenglen Dr'
 image_address = 'https://photos.zillowstatic.com/fp/466ce188280320fe0767ec885d9773a2-cc_ft_1536.png'
 #############[changes with the property]###################
 # One-Time Costs
-Buying_Cost = st.slider('Listing Price', 100000, 300000, 100000, 1000)
+Buying_Cost = st.slider('Listing Price', 100000, 200000, 100000, 500)
 
 # Initial Annual Costs [changes with the property]
 HOA = st.slider('HOA Fee', 0, 500, 0, 10)
@@ -119,5 +119,5 @@ fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
 
-
+st.markdown(ROI10, unsafe_allow_html=False)
 st.pyplot(ax)
