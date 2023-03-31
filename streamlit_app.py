@@ -75,13 +75,12 @@ cost = list(map(Total_Cost, x))
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
-fig = plt.figure(figsize=(10, 4))
+fig, ax = plt.subplots()
 
-sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
+ax = sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
 # sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
 
-df
-# st.pyplot(fig)
+st.pyplot(fig)
 
 ###########################################################
 # import streamlit as st
