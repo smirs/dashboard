@@ -76,8 +76,8 @@ ax = plt.figure(figsize=(44, 32))
 
 # st.pyplot(ax)
 
-plt.axvline(Years_ToPayOff_Desired, 0 ,1)
-plt.axvline(year_of_one_million, 0 ,1)
+# plt.axvline(Years_ToPayOff_Desired, 0 ,1)
+# plt.axvline(year_of_one_million, 0 ,1)
 
 ax.text(14, cost[14]+200000,'Cost', fontsize=24, color='red')
 ax.text(14, gain[14]-300000,'Gain', fontsize=24, color='green')
