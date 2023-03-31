@@ -2,16 +2,17 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 sns.set(rc={"figure.figsize":(22, 12)}, font_scale=5) 
-from PIL import Image
 import matplotlib.pyplot as plt
 import streamlit as st
 
-from matplotlib.offsetbox import TextArea, DrawingArea, OffsetImage, AnnotationBbox
-import matplotlib.image as mpimg
+a = """Some text
 
+![Cool Image](https://d33wubrfki0l68.cloudfront.net/442bccd786f4d6c1b07f9f58aa3f894f4c38a0c2/e1e28/assets/img/olab_logo.png)
 
-image = Image.open('https://d33wubrfki0l68.cloudfront.net/442bccd786f4d6c1b07f9f58aa3f894f4c38a0c2/e1e28/assets/img/olab_logo.png')
-st.image(image, caption='Good Deal Bad Deal')
+Some more text"""
+
+st.markdown(a)
+
 
 Address = '1976 Greenglen Dr'
 image_address = 'https://photos.zillowstatic.com/fp/466ce188280320fe0767ec885d9773a2-cc_ft_1536.png'
