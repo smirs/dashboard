@@ -1,19 +1,14 @@
-import pandas as pd
-import numpy as np
-import seaborn as sns
+import streamlit as st
 import matplotlib.pyplot as plt
-sns.set(font_scale=4)
 
-x = [0,1,2,3,4]
-y = [0,1,2,3,4]
-data = pd.DataFrame({'x':x, 'y':y})
-ax = sns.pointplot(x='x', y='y', data=data)
+#create your figure and get the figure object returned
+fig = plt.figure() 
+plt.plot([1, 2, 3, 4, 5]) 
+
+st.pyplot(fig)
 
 ###########################################################
 
-st.pyplot(ax)
-
-###
 import streamlit as st
 age = st.slider('How old are you?', 0, 130, 25)
 st.write("I'm ", age, 'years old')
