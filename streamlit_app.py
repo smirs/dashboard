@@ -20,7 +20,7 @@ HOA = st.slider('HOA Fee', 0, 500, 250, 10)
 Maintenance_Annual_Cost = 12*HOA #12000
 
 # Initial Annual Gains 
-Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 1200, 100)
+Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 1500, 100)
 Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
@@ -31,7 +31,7 @@ Appreciation_Rate = 0.025 # source: https://www.ownerly.com/real-estate/average-
 Depressioation_Rate = 0.03
 Closing_Cost_Rate = 0.03
 
-DownPayment_Amount = st.slider('Cash Amount', 0, 200000, 0, 5000)
+DownPayment_Amount = st.slider('Cash Amount', 0, 200000, 150000, 5000)
 DownPayment_Cost = DownPayment_Rate * Buying_Cost
 Loan_Amount =  Buying_Cost - DownPayment_Amount# Buying_Cost - DownPayment_Cost
 Loan_Cost = Interest_Rate * Loan_Amount
