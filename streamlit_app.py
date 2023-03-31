@@ -52,8 +52,75 @@ def Total_Cost(x):
 def Total_Gain(x):
     return x * Rental_Annual_Gain + Property_Ownership_Rate(x) * Property_Value_Expected(x)
 
+# Return On Investment at the Desired Year
+ROI = round(Total_Gain(Years_ToPayOff_Desired) / Total_Cost(Years_ToPayOff_Desired) , 3)
+ROI3 = round(Total_Gain(3) / Total_Cost(3) , 3)
+ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
+ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
 ###########################################################
 
+fig, ax = plt.subplots(figsize=(22, 12))
+
+for tick in ax.xaxis.get_major_ticks():
+    tick.label.set_fontsize(20)
+
+for tick in ax.yaxis.get_major_ticks():
+    tick.label.set_fontsize(20)
+    
+sns.set(rc={"figure.figsize":(22, 12)})
+x = list(np.arange(0,16, 1))
+
+gain = list(map(Total_Gain, x))
+cost = list(map(Total_Cost, x))
+# fig, ax = plt.subplots()
+
+df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
+
+year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
+year_of_one_million
+
+ax = sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
+ax = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
+plt.axvline(Years_ToPayOff_Desired, 0 ,1)
+plt.axvline(year_of_one_million, 0 ,1)
+
+ax.text(14, cost[14]+200000,'Cost', fontsize=24, color='red')
+ax.text(14, gain[14]-300000,'Gain', fontsize=24, color='green')
+ax.text(Years_ToPayOff_Desired, 0.5*max(gain),'Expected Time For\nMortgate Payoff ~ ' + str(round(Years_ToPayOff_Desired, 1)) + ' Years', fontsize=24, color='darkblue')
+ax.text(year_of_one_million, 0.5*max(gain),'Expected Time For\nProfit in $1M ' + str(round(year_of_one_million, 1)), fontsize=24, color='darkred')
+
+
+ax.text(0, 1.1*max(gain), 'Property = '+ Address, fontsize=28, color='black')
+
+d = 120000
+ax.text(0, 0.95*max(gain) - 0*d, 'VARIABLES', fontsize=22, color='darkblue')
+
+ax.text(0, 0.95*max(gain) - 1*d, 'Purchase Price = $'+str(Buying_Cost), fontsize=18, color='black')
+ax.text(0, 0.95*max(gain) - 2*d, 'Annual Maintenance Costs = $'+str(Maintenance_Annual_Cost), fontsize=18, color='black')
+ax.text(0, 0.95*max(gain) - 3*d, 'Monthly Collected Rent = $' + str(Rental_Annual_Gain/12), fontsize=18, color='black')
+ax.text(0, 0.95*max(gain) - 4*d, 'Monthly Mortgage Payment = $' + str(Mortgage_Payment_Desired/12), fontsize=18, color='black')
+ax.text(0, 0.95*max(gain) - 5*d, 'Expected ROI @3 Yr = ' + str(round(ROI3*100,1)) + '%' , fontsize=18, color='darkred')
+ax.text(0, 0.95*max(gain) - 6*d, 'Expected ROI @5 Yr = ' + str(round(ROI5*100,1)) + '%' , fontsize=18, color='darkred')
+ax.text(0, 0.95*max(gain) - 7*d, 'Expected ROI @10 Yr = ' + str(round(ROI10*100,1)) + '%' , fontsize=18, color='darkred')
+
+ax.text(0, 0.95*max(gain) - 10*d, 'ASSUMPTIONS', fontsize=20, color='darkblue')
+ax.text(0, 0.95*max(gain) - 11*d, 'Down Payment Ratio = ' + str(round(DownPayment_Rate*100,1)) + '%' , fontsize=16, color='grey')
+ax.text(0, 0.95*max(gain) - 12*d, 'Closing Cost Ratio = ' + str(round(Closing_Cost_Rate*100,1)) + '%' , fontsize=16, color='grey')
+ax.text(0, 0.95*max(gain) - 13*d, 'Interest_Rate = ' + str(round(Interest_Rate*100,1)) + '%' , fontsize=16, color='grey')
+ax.text(0, 0.95*max(gain) - 14*d, 'Appreciation Rate = ' + str(round(Appreciation_Rate*100,1)) + '%' , fontsize=16, color='grey')
+# ax.text(0, 0.95*max(gain) - 15*d, 'Depreciation Rate = ' + str(round(Depressioation_Rate*100,1)) + '%' , fontsize=16, color='grey')
+
+
+
+ax.set(ylim=(0, 1.1*max(gain)), xlabel='Years', ylabel='$USD')
+
+arr_lena = mpimg.imread(image_address)
+imagebox = OffsetImage(arr_lena, zoom=0.25)
+ab = AnnotationBbox(imagebox, (11, 0.95*max(gain)))
+ax.add_artist(ab)
+
+    
+st.pyplot(ax)
 
 ###########################################################
 import streamlit as st
