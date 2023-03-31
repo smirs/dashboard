@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 from IPython.display import display, HTML
-display(HTML("<style>.container { width:100% !important; }</style>"))
+# display(HTML("<style>.container { width:100% !important; }</style>"))
 
 ## Assumptions
 Address = '1976 Greenglen Dr'
