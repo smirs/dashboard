@@ -6,7 +6,9 @@ sns.set(font_scale=4)
 
 x = [0,1,2,3,4]
 y = [0,1,2,3,4]
-ax = sns.lineplot(x,y)
+data = pd.DataFrame({'x':x, 'y':y})
+data
+ax = sns.pointplot(x='x', y='y', data=data)
 
 ###########################################################
 
