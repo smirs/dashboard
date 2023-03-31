@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
+sns.set(rc={"figure.figsize":(22, 12)}, font_scale=5) 
+
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -58,7 +60,6 @@ ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
 ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
 
 
-sns.set(rc={"figure.figsize":(22, 12)}, font_scale=5,  linewidth = 5) 
 x = list(np.arange(0,16, 1))
 
 gain = list(map(Total_Gain, x))
