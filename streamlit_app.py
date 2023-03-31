@@ -121,10 +121,6 @@ fig.set_title(Address, fontdict={'size': 120, 'weight': 'bold'})
 fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
-a = """
-# ROI10
-"""
-
-st.markdown(Score = # ROI10)
+st.markdown('''SCORE = ''' = ROI10)
 
 # st.pyplot(ax)
