@@ -20,7 +20,7 @@ HOA = st.slider('HOA Fee', 0, 500, 0, 10)
 Maintenance_Annual_Cost = 12*HOA #12000
 
 # Initial Annual Gains 
-Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 0, 100)
+Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 1000, 100)
 Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
