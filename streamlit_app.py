@@ -69,7 +69,7 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 # year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
 
-# ax = plt.figure(figsize=(44, 32))
+ax = plt.figure(figsize=(44, 32))
 
 sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
 sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
