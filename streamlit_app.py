@@ -27,11 +27,11 @@ Rental_Annual_Gain = 12 * Rent #3500
 # Rates 
 Interest_Rate = 0.08 #0,06
 DownPayment_Rate = 1.0 #0.20
-Appreciation_Rate = 0.04 # source: https://www.ownerly.com/real-estate/average-home-appreciation/
+Appreciation_Rate = 0.025 # source: https://www.ownerly.com/real-estate/average-home-appreciation/
 Depressioation_Rate = 0.03
-Closing_Cost_Rate = 0.02
+Closing_Cost_Rate = 0.03
 
-DownPayment_Amount = st.slider('Cash Amount', 0, 160000, 0, 5000)
+DownPayment_Amount = st.slider('Cash Amount', 0, 150000, 0, 5000)
 DownPayment_Cost = DownPayment_Rate * Buying_Cost
 Loan_Amount =  Buying_Cost - DownPayment_Amount# Buying_Cost - DownPayment_Cost
 Loan_Cost = Interest_Rate * Loan_Amount
@@ -58,9 +58,9 @@ def Total_Gain(x):
 
 # Return On Investment at the Desired Year
 ROI = round(Total_Gain(Years_ToPayOff_Desired) / Total_Cost(Years_ToPayOff_Desired) , 3)
-ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 0)
-ROI5 = round(Total_Gain(5) / Total_Cost(5)*10 , 0)
-ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 0)
+ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 1)
+ROI5 = round(Total_Gain(5) / Total_Cost(5)*10 , 1)
+ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 1)
 
 x = list(np.arange(0,16, 1))
 
