@@ -57,12 +57,6 @@ ROI3 = round(Total_Gain(3) / Total_Cost(3) , 3)
 ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
 ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
 
-for tick in ax.xaxis.get_major_ticks():
-    tick.label.set_fontsize(20)
-
-for tick in ax.yaxis.get_major_ticks():
-    tick.label.set_fontsize(20)
-    
 sns.set(rc={"figure.figsize":(22, 12)})
 x = list(np.arange(0,16, 1))
 
