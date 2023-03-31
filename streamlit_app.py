@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 a = """
-# Good Deal / Bad Deal
-![figure description](https://media.licdn.com/dms/image/C560BAQH4Inxzo6nOYg/company-logo_200_200/0/1644734090744?e=2147483647&v=beta&t=I6lBab9ZQRVkTfbIVFXH6L1X57lITFSY9llPahd8A7c){width=10%}
+<p style="text-align: center;">#Good Deal 🏠 Bad Deal</p>
 """
 
 st.markdown(a)
