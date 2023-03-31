@@ -74,7 +74,7 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 val_count  = df['cost'].value_counts()
 fig = plt.figure(figsize=(10,5))
-sns.barplot(val_count.index, val_count.values, alpha=0.8)
+sns.scatterplot(df['cost'], df['gain'], alpha=0.8)
 fig.title('Some title')
 fig.ylabel('y label', fontsize=12)
 fig.xlabel('x label', fontsize=12)
