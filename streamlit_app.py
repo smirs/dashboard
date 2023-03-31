@@ -58,7 +58,7 @@ ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
 ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
 
 
-sns.set(rc={"figure.figsize":(22, 12)}, font_scale=2) 
+sns.set(rc={"figure.figsize":(22, 12)}, font_scale=20) 
 x = list(np.arange(0,16, 1))
 
 gain = list(map(Total_Gain, x))
