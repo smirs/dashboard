@@ -115,6 +115,5 @@ fig = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost', l
 fig.set_title('Sample Title', fontdict={'size': 30, 'weight': 'bold'})
 fig.set_xlabel('Year', fontdict={'size': 50})
 fig.set_ylabel('Dollar $', fontdict={'size': 50})
-fig.text(0, 0.95*max(gain) - 1*d, 'Purchase Price = $'+str(Buying_Cost), fontsize=18, color='black')
 
 st.pyplot(ax)
