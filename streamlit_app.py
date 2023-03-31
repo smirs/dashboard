@@ -71,12 +71,9 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 ax = plt.figure(figsize=(44, 32))
 
-sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
-sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
-
-
 plt.axvline(Years_ToPayOff_Desired, 0 ,1)
 plt.axvline(year_of_one_million, 0 ,1)
+
 
 # ax.text(14, cost[14]+200000,'Cost', fontsize=24, color='red')
 # ax.text(14, gain[14]-300000,'Gain', fontsize=24, color='green')
@@ -112,5 +109,8 @@ plt.axvline(year_of_one_million, 0 ,1)
 # imagebox = OffsetImage(arr_lena, zoom=0.25)
 # ab = AnnotationBbox(imagebox, (11, 0.95*max(gain)))
 # ax.add_artist(ab)
+
+sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
+sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
 
 st.pyplot(ax)
