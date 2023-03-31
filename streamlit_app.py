@@ -25,7 +25,7 @@ Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
 # Rates 
-Interest_Rate = 0.05 #0,06
+Interest_Rate = 0.08 #0,06
 DownPayment_Rate = 1.0 #0.20
 Appreciation_Rate = 0.04 # source: https://www.ownerly.com/real-estate/average-home-appreciation/
 Depressioation_Rate = 0.03
