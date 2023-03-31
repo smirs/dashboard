@@ -57,11 +57,9 @@ def Total_Gain(x):
 
 # Return On Investment at the Desired Year
 ROI = round(Total_Gain(Years_ToPayOff_Desired) / Total_Cost(Years_ToPayOff_Desired) , 3)
-ROI3 = round(Total_Gain(3) / Total_Cost(3) , 3)
-ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
-ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
-ROI20 = round(Total_Gain(20) / Total_Cost(20) , 3)
-
+ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 3)
+ROI5 = round(Total_Gain(5) / Total_Cost(5)*19 , 3)
+ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 3)
 
 x = list(np.arange(0,16, 1))
 
@@ -120,9 +118,8 @@ fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
 
-st.write('ROI 1  = ', ROI)
-st.write('ROI 5  = ', ROI5)
-st.write('ROI 10 = ', ROI10)
-st.write('ROI 20 = ', ROI20)
+st.write('ROI1  Score = ', ROI)
+st.write('ROI5  Score = ', ROI5)
+st.write('ROI10 Score = ', ROI10)
 
 # st.pyplot(ax)
