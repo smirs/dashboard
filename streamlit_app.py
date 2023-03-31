@@ -63,16 +63,15 @@ x = list(np.arange(0,16, 1))
 
 gain = list(map(Total_Gain, x))
 cost = list(map(Total_Cost, x))
-# fig, ax = plt.subplots()
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
-# year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
+year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
 
 ax = plt.figure(figsize=(44, 32))
 
-plt.axvline(Years_ToPayOff_Desired, 0 ,1)
-plt.axvline(year_of_one_million, 0 ,1)
+# plt.axvline(Years_ToPayOff_Desired, 0 ,1)
+# plt.axvline(year_of_one_million, 0 ,1)
 
 
 # ax.text(14, cost[14]+200000,'Cost', fontsize=24, color='red')
