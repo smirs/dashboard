@@ -37,6 +37,21 @@ Closing_Cost = Closing_Cost_Rate * Buying_Cost
 Mortgage_Payment_Desired = 12 * 6000 #6000
 Years_ToPayOff_Desired = round((Loan_Cost + Loan_Amount)/Mortgage_Payment_Desired,2)
 
+
+def Property_Value_Expected(x): 
+    return Buying_Cost * (1 + Appreciation_Rate)**x
+
+def Property_Ownership_Rate(x): 
+    return (x * Mortgage_Payment_Desired + DownPayment_Cost)/Buying_Cost
+
+# Expected_Payoff_Years = ( (Expected_Loan_Cost + Closing_Cost + Buying_Cost) - (Expected_Property_Value) ) / (Rental_Annual_Gain - Maintenance_Annual_Cost)
+
+def Total_Cost(x):
+    return x * Maintenance_Annual_Cost + min(x * Mortgage_Payment_Desired, Buying_Cost - DownPayment_Cost) + Loan_Cost + Closing_Cost + DownPayment_Cost
+
+def Total_Gain(x):
+    return x * Rental_Annual_Gain + Property_Ownership_Rate(x) * Property_Value_Expected(x)
+
 ###########################################################
 
 
