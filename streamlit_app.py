@@ -66,16 +66,16 @@ cost = list(map(Total_Cost, x))
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
-# fig = plt.figure(figsize=(10,5))
-# sns.scatterplot(x=df['cost'], y=df['gain'], alpha=0.8)
+fig = plt.figure(figsize=(10,5))
+sns.scatterplot(x=df['cost'], y=df['gain'], alpha=0.8)
 
 # # Add figure in streamlit app
 # st.pyplot(fig)
 
 
-ax = plt.figure(figsize=(44, 32))
-sns.lineplot(x='time', y='gain', data=df)
-st.pyplot(ax)
+# ax = plt.figure(figsize=(44, 32))
+# sns.lineplot(x='time', y='gain', data=df)
+# st.pyplot(ax)
 
 
 # sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
