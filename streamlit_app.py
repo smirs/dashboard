@@ -112,7 +112,7 @@ ax = plt.figure(figsize=(44, 32))
 
 fig = sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain', linewidth=10)
 fig = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost', linewidth=10)
-fig.set_title(Address, fontdict={'size': 30, 'weight': 'bold'})
+fig.set_title(Address, fontdict={'size': 120, 'weight': 'bold'})
 fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
