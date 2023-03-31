@@ -119,5 +119,5 @@ fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
 
-st.markdown(ROI10, unsafe_allow_html=False)
-st.pyplot(ax)
+st.markdown('ROI 10 = '+ ROI10, unsafe_allow_html=False)
+# st.pyplot(ax)
