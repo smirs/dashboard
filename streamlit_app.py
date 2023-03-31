@@ -114,10 +114,10 @@ ax.text(0, 0.95*max(gain) - 14*d, 'Appreciation Rate = ' + str(round(Appreciatio
 
 ax.set(ylim=(0, 1.1*max(gain)), xlabel='Years', ylabel='$USD')
 
-arr_lena = mpimg.imread(image_address)
-imagebox = OffsetImage(arr_lena, zoom=0.25)
-ab = AnnotationBbox(imagebox, (11, 0.95*max(gain)))
-ax.add_artist(ab)
+# arr_lena = mpimg.imread(image_address)
+# imagebox = OffsetImage(arr_lena, zoom=0.25)
+# ab = AnnotationBbox(imagebox, (11, 0.95*max(gain)))
+# ax.add_artist(ab)
 
     
 st.pyplot(ax)
