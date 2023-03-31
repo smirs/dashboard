@@ -81,8 +81,8 @@ year_of_one_million
 
 ax = plt.figure(figsize=(44, 32))
 
-ax = sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
-ax = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
+ax = plt.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
+ax = plt.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
 plt.axvline(Years_ToPayOff_Desired, 0 ,1)
 plt.axvline(year_of_one_million, 0 ,1)
 
