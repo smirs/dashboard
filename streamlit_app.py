@@ -117,18 +117,6 @@ fig.set_title(Address, fontdict={'size': 120, 'weight': 'bold'})
 fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
-st.set_page_config(layout="wide")
-
-st.markdown("""
-<style>
-.big-font {
-    font-size:300px !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
-
 st.write('ROI10 Score = ', ROI10)
 
 # st.pyplot(ax)
