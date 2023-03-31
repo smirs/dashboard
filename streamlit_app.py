@@ -8,7 +8,7 @@ from matplotlib.offsetbox import TextArea, DrawingArea, OffsetImage, AnnotationB
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-from IPython.display import display, HTML
+# from IPython.display import display, HTML
 # display(HTML("<style>.container { width:100% !important; }</style>"))
 
 ## Assumptions
