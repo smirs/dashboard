@@ -74,7 +74,7 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 
 ax = plt.figure(figsize=(44, 32))
-ax = sns.lineplot(x='time', y='gain', data=df)
+sns.lineplot(x='time', y='gain', data=df)
 st.pyplot(ax)
 
 
