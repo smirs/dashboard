@@ -13,10 +13,11 @@ Address = '1976 Greenglen Dr'
 image_address = 'https://photos.zillowstatic.com/fp/466ce188280320fe0767ec885d9773a2-cc_ft_1536.png'
 #############[changes with the property]###################
 # One-Time Costs
-Buying_Cost = 169900 #450000
+Buying_Cost = st.slider('Listing Price', 100000, 300000, 100000)
 
 # Initial Annual Costs [changes with the property]
-Maintenance_Annual_Cost = 12*295 #12000
+HOA = st.slider('HOA Fee', 0, 500, 0)
+Maintenance_Annual_Cost = 12*HOA #12000
 
 # Initial Annual Gains 
 Rental_Annual_Gain = 12 * (1650) #3500
@@ -115,5 +116,7 @@ fig = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost', l
 fig.set_title(Address, fontdict={'size': 120, 'weight': 'bold'})
 fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
+
+
 
 st.pyplot(ax)
