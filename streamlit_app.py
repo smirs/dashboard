@@ -13,14 +13,14 @@ Address = '1976 Greenglen Dr'
 image_address = 'https://photos.zillowstatic.com/fp/466ce188280320fe0767ec885d9773a2-cc_ft_1536.png'
 #############[changes with the property]###################
 # One-Time Costs
-Buying_Cost = st.slider('Listing Price', 100000, 200000, 100000, 500)
+Buying_Cost = st.slider('Listing Price', 100000, 200000, 150000, 500)
 
 # Initial Annual Costs [changes with the property]
-HOA = st.slider('HOA Fee', 0, 500, 0, 10)
+HOA = st.slider('HOA Fee', 0, 500, 250, 10)
 Maintenance_Annual_Cost = 12*HOA #12000
 
 # Initial Annual Gains 
-Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 1000, 100)
+Rent = st.slider('Estimated Monthly Rate', 1000, 2000, 1200, 100)
 Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
@@ -57,9 +57,9 @@ def Total_Gain(x):
 
 # Return On Investment at the Desired Year
 ROI = round(Total_Gain(Years_ToPayOff_Desired) / Total_Cost(Years_ToPayOff_Desired) , 3)
-ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 3)
-ROI5 = round(Total_Gain(5) / Total_Cost(5)*19 , 3)
-ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 3)
+ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 0)
+ROI5 = round(Total_Gain(5) / Total_Cost(5)*19 , 0)
+ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 0)
 
 x = list(np.arange(0,16, 1))
 
