@@ -120,7 +120,7 @@ ax.set(ylim=(0, 1.1*max(gain)), xlabel='Years', ylabel='$USD')
 # ax.add_artist(ab)
 
     
-# st.pyplot(ax)
+st.pyplot(ax)
 
 ###########################################################
 import streamlit as st
