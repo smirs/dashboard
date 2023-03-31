@@ -14,7 +14,7 @@ txt = st.text_area('Text to analyze', '''
     was the spring of hope, it was the winter of despair, (...)
     ''')
 
-price = st.slider('Listing Price?', 100000, 200000, 500)
+price = st.slider('Listing Price?', 100000, 200000, 100)
 st.write("I'm ", price, 'years old', txt)
 
 #create your figure and get the figure object returned
