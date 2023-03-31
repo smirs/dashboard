@@ -31,8 +31,9 @@ Appreciation_Rate = 0.04 # source: https://www.ownerly.com/real-estate/average-h
 Depressioation_Rate = 0.03
 Closing_Cost_Rate = 0.02
 
+DownPayment_Amount = st.slider('Cash Amount', 0, 160000, 0, 5000)
 DownPayment_Cost = DownPayment_Rate * Buying_Cost
-Loan_Amount = st.slider('Loan Amount', 0, 200000, 0, 5000) # Buying_Cost - DownPayment_Cost
+Loan_Amount =  Buying_Cost - DownPayment_Amount# Buying_Cost - DownPayment_Cost
 Loan_Cost = Interest_Rate * Loan_Amount
 Closing_Cost = Closing_Cost_Rate * Buying_Cost
 
