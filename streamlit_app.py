@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 a = """
-<p style="text-align: center;">Good Deal 🏠 Bad Deal</p>
+# Good Deal 🏠 Bad Deal
 """
 
 st.markdown(a)
