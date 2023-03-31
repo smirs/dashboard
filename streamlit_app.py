@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 sns.set(font_scale=4)
 
 from matplotlib.offsetbox import TextArea, DrawingArea, OffsetImage, AnnotationBbox
-import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 Address = '1976 Greenglen Dr'
@@ -81,8 +80,8 @@ fig = plt.figure(figsize=(10, 4))
 sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain')
 # sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost')
 
-
-st.pyplot(fig)
+df
+# st.pyplot(fig)
 
 ###########################################################
 # import streamlit as st
