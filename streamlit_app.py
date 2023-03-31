@@ -68,10 +68,6 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 fig = plt.figure(figsize=(10,5))
 sns.scatterplot(x=df['cost'], y=df['gain'], alpha=0.8)
-fig.title('Some title')
-fig.ylabel('y label', fontsize=12)
-fig.xlabel('x label', fontsize=12)
-
 
 # Add figure in streamlit app
 st.pyplot(fig)
