@@ -118,7 +118,6 @@ fig.set_xlabel('Year', fontdict={'size': 100})
 fig.set_ylabel('USD', fontdict={'size': 100})
 
 
-st.write('ROI1  Score = ', ROI)
 st.write('ROI5  Score = ', ROI5)
 st.write('ROI10 Score = ', ROI10)
 
