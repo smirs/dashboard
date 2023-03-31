@@ -110,7 +110,10 @@ ax = plt.figure(figsize=(44, 32))
 # ab = AnnotationBbox(imagebox, (11, 0.95*max(gain)))
 # ax.add_artist(ab)
 
-sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain', linewidth=5)
-sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost', linewidth=5)
+fig = sns.lineplot(x='time', y='gain', data=df, color = 'green', label = 'gain', linewidth=10)
+fig = sns.lineplot(x='time', y='cost', data=df, color = 'red', label = 'cost', linewidth=10)
+fig.set_title('Sample Title', fontdict={'size': 30, 'weight': 'bold'})
+fig.set_xlabel('Day of Week', fontdict={'size': 15})
+fig.set_ylabel('Tip Amount', fontdict={'size': 15})
 
 st.pyplot(ax)
