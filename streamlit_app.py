@@ -7,7 +7,7 @@ import streamlit as st
 
 a = """
 # Good Deal / Bad Deal
-![figure description](https://d33wubrfki0l68.cloudfront.net/442bccd786f4d6c1b07f9f58aa3f894f4c38a0c2/e1e28/assets/img/olab_logo.png){width=10%}
+![figure description](https://media.licdn.com/dms/image/C560BAQH4Inxzo6nOYg/company-logo_200_200/0/1644734090744?e=2147483647&v=beta&t=I6lBab9ZQRVkTfbIVFXH6L1X57lITFSY9llPahd8A7c){width=10%}
 """
 
 st.markdown(a)
