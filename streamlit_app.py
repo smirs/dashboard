@@ -57,6 +57,7 @@ ROI3 = round(Total_Gain(3) / Total_Cost(3) , 3)
 ROI5 = round(Total_Gain(5) / Total_Cost(5) , 3)
 ROI10 = round(Total_Gain(10) / Total_Cost(10) , 3)
 
+
 sns.set(rc={"figure.figsize":(22, 12)})
 x = list(np.arange(0,16, 1))
 
@@ -65,6 +66,8 @@ cost = list(map(Total_Cost, x))
 # fig, ax = plt.subplots()
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
+
+year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
 
 ax = plt.figure(figsize=(44, 32))
 
