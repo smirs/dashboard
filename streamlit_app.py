@@ -66,9 +66,8 @@ cost = list(map(Total_Cost, x))
 
 df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
-val_count  = df['cost'].value_counts()
 fig = plt.figure(figsize=(10,5))
-sns.scatterplot(df['cost'], df['gain'], alpha=0.8)
+sns.scatterplot(x=df['cost'], y=df['gain'], alpha=0.8)
 fig.title('Some title')
 fig.ylabel('y label', fontsize=12)
 fig.xlabel('x label', fontsize=12)
