@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
-sns.set(rc={"figure.figsize":(22, 12)}, font_scale=5) 
+sns.set(rc={"figure.figsize":(10, 2)}, font_scale=5) 
 import matplotlib.pyplot as plt
 import streamlit as st
 
