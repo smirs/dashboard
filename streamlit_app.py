@@ -136,8 +136,8 @@ fig.set_ylim(0, 1)
 
 plt.axvline(thresh_ok, 0 ,1)
 
-# fig.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
-#                 color='red', alpha=0.5, transform=ax.get_xaxis_transform())
+fig.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
+                color='red', alpha=0.5, transform=ax.get_xaxis_transform())
 
 # plt.axvline(thresh_great, 0 ,1)
 
