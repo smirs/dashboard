@@ -121,7 +121,7 @@ ax = plt.figure(figsize=(44, 32))
 # fig.set_xlabel('Year', fontdict={'size': 100})
 # fig.set_ylabel('USD', fontdict={'size': 100})
 
-# st.write('ROI10 Score = ', ROI10)
+st.write('ROI10 Score = ', ROI10)
 
 # thresh = ROI10
 
