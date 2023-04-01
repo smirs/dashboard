@@ -123,30 +123,30 @@ ax = plt.figure(figsize=(44, 32))
 
 st.write('ROI10 Score = ', ROI10)
 
-# thresh = ROI10
+thresh = ROI10
 
-# thresh_ok = 70
-# thresh_great = 80
+thresh_ok = 70
+thresh_great = 80
 
-# x = np.arange(0, 100, 0.01)
-# y = x
-# ax = sns.scatterplot(x=[1, 2, 3], y=[1, 3, 2])
-# ax.set_xlim(1, 100)
-# ax.set_ylim(0, 1)
+x = np.arange(0, 100, 0.01)
+y = x
+sns.scatterplot(x=[1, 2, 3], y=[1, 3, 2])
+ax.set_xlim(1, 100)
+ax.set_ylim(0, 1)
 
-# plt.axvline(thresh_ok, 0 ,1)
+plt.axvline(thresh_ok, 0 ,1)
 
-# ax.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
-#                 color='red', alpha=0.5, transform=ax.get_xaxis_transform())
+ax.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
+                color='red', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# plt.axvline(thresh_great, 0 ,1)
+plt.axvline(thresh_great, 0 ,1)
 
-# ax.fill_between(x, 0, thresh_great, where= (y>thresh_ok) & (y<thresh_great),
-#                 color='yellow', alpha=0.5, transform=ax.get_xaxis_transform())
+ax.fill_between(x, 0, thresh_great, where= (y>thresh_ok) & (y<thresh_great),
+                color='yellow', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# ax.fill_between(x, 0, thresh_great, where= y>thresh_great,
-#                 color='green', alpha=0.5, transform=ax.get_xaxis_transform())
+ax.fill_between(x, 0, thresh_great, where= y>thresh_great,
+                color='green', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=2)
+plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=2)
 
-# st.pyplot(ax)
+st.pyplot(ax)
