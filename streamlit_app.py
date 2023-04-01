@@ -147,6 +147,6 @@ fig.fill_between(x, 0, thresh_great, where= (y>thresh_ok) & (y<thresh_great),
 fig.fill_between(x, 0, thresh_great, where= y>thresh_great,
                 color='green', alpha=0.5, transform=fig.get_xaxis_transform())
 
-plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=2)
+plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=20)
 
 st.pyplot(ax)
