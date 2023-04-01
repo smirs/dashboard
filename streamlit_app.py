@@ -136,17 +136,17 @@ fig.set_ylim(0, 1)
 
 plt.axvline(thresh_ok, 0 ,1)
 
-fig.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
+ax.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
                 color='red', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# plt.axvline(thresh_great, 0 ,1)
+plt.axvline(thresh_great, 0 ,1)
 
-# fig.fill_between(x, 0, thresh_great, where= (y>thresh_ok) & (y<thresh_great),
-#                 color='yellow', alpha=0.5, transform=ax.get_xaxis_transform())
+ax.fill_between(x, 0, thresh_great, where= (y>thresh_ok) & (y<thresh_great),
+                color='yellow', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# fig.fill_between(x, 0, thresh_great, where= y>thresh_great,
-#                 color='green', alpha=0.5, transform=ax.get_xaxis_transform())
+ax.fill_between(x, 0, thresh_great, where= y>thresh_great,
+                color='green', alpha=0.5, transform=ax.get_xaxis_transform())
 
-# plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=2)
+plt.axvline(thresh, 0 ,1, color='black', linestyle='--', linewidth=2)
 
 st.pyplot(ax)
