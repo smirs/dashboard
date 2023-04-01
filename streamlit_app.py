@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
-sns.set(rc={"figure.figsize":(10, 2)}, font_scale=5) 
+# sns.set(rc={"figure.figsize":(10, 2)}, font_scale=5) 
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -74,7 +74,7 @@ df = pd.DataFrame({'time':x, 'gain':gain, 'cost':cost})
 
 year_of_one_million = list(df.loc[((df['gain']-df['cost'])>1000000),'time'])[0]
 
-ax = plt.figure(figsize=(44, 32))
+ax = plt.figure(figsize=(44, 12))
 
 # plt.axvline(Years_ToPayOff_Desired, 0 ,1)
 # plt.axvline(year_of_one_million, 0 ,1)
