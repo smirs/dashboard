@@ -134,7 +134,7 @@ fig = sns.scatterplot(x=[1, 2, 3], y=[1, 3, 2])
 fig.set_xlim(1, 100)
 fig.set_ylim(0, 1)
 
-# plt.axvline(thresh_ok, 0 ,1)
+plt.axvline(thresh_ok, 0 ,1)
 
 # fig.fill_between(x, 0, thresh_ok, where= y<thresh_ok,
 #                 color='red', alpha=0.5, transform=ax.get_xaxis_transform())
