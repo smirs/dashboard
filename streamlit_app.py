@@ -63,8 +63,7 @@ def Total_Gain(x):
 ROI = round(Total_Gain(Years_ToPayOff_Desired) / Total_Cost(Years_ToPayOff_Desired) , 3)
 ROI3 = round(Total_Gain(3) / Total_Cost(3)*10 , 1)
 ROI5 = round(Total_Gain(5) / Total_Cost(5)*10 , 1)
-ROI10 = round(Total_Gain(20) / Total_Cost(20)*10 , 1)
-ROI20 = round(Total_Gain(20) / Total_Cost(20)*10 , 1)
+ROI10 = round(Total_Gain(10) / Total_Cost(10)*10 , 1)
 
 x = list(np.arange(0,16, 1))
 
