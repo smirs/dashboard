@@ -28,10 +28,10 @@ Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
 # Rates 
-Interest_Rate = 0.08 #0,06
+Interest_Rate = 0.05 #0,06
 DownPayment_Rate = 1.0 #0.20
 Appreciation_Rate = 0.025 # source: https://www.ownerly.com/real-estate/average-home-appreciation/
-Depressioation_Rate = 0.03
+Depressioation_Rate = 0.010
 Closing_Cost_Rate = 0.03
 
 DownPayment_Amount = st.slider('Down Payment Amount', 0, Buying_Cost, Buying_Cost, 5000)
@@ -125,8 +125,8 @@ st.write('ROI10 Score = ', ROI10)
 
 thresh = ROI10
 
-thresh_ok = 70
-thresh_great = 80
+thresh_ok = 50
+thresh_great = 75
 
 x = np.arange(0, 100, 0.01)
 y = x
