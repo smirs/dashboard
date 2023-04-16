@@ -16,14 +16,14 @@ Address = '1976 Greenglen Dr'
 image_address = 'https://photos.zillowstatic.com/fp/466ce188280320fe0767ec885d9773a2-cc_ft_1536.png'
 #############[changes with the property]###################
 # One-Time Costs
-Buying_Cost = st.slider('Listing Price', 100000, 500000, 150000, 500)
+Buying_Cost = st.slider('Listing Price', 100000, 250000, 150000, 500)
 
 # Initial Annual Costs [changes with the property]
-HOA = st.slider('Monthly HOA Fee', 0, 1000, 250, 10)
+HOA = st.slider('Monthly HOA Fee', 0, 500, 250, 50)
 Maintenance_Annual_Cost = 12*HOA #12000
 
 # Initial Annual Gains 
-Rent = st.slider('Estimated Monthly Rate', 1000, 5000, 1500, 100)
+Rent = st.slider('Estimated Monthly Rate', 1000, 3000, 1500, 100)
 Rental_Annual_Gain = 12 * Rent #3500
 
 #############[do not change with property]#################
